@@ -85,6 +85,40 @@
     h2{font-family:"Orbitron",monospace;font-size:clamp(28px,4vw,50px);font-weight:700;line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;color:#fff;}
     .acc{color:var(--cyan);}
 
+    /* ── ABOUT ── */
+#about{padding:120px 60px;background:linear-gradient(to bottom,var(--bg2),var(--bg));}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
+.ab-role{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);margin-top:16px;margin-bottom:28px;}
+.ab-body{font-size:15px;line-height:2;color:rgba(255,255,255,.75);}
+.ab-body p+p{margin-top:20px;}
+.ab-body strong{color:var(--cyan);font-weight:600;}
+.ab-stats{display:flex;gap:0;margin-top:48px;border:1px solid var(--border);}
+.ab-stat{flex:1;padding:24px 20px;text-align:center;border-right:1px solid var(--border);}
+.ab-stat:last-child{border-right:none;}
+.ab-num{font-family:"Orbitron",monospace;font-size:28px;font-weight:900;color:var(--cyan);display:block;}
+.ab-lbl{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:6px;display:block;}
+.ab-card{border:1px solid var(--border);background:rgba(255,255,255,.02);padding:48px 40px;position:relative;}
+.ab-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));}
+.ab-tag{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:5px 14px;display:inline-block;margin-bottom:36px;}
+.ab-skills{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.ab-skill{font-size:13px;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:12px;}
+.ab-sk-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px var(--cyan);}
+.ab-quote{font-family:"Orbitron",monospace;font-size:13px;font-weight:600;line-height:1.7;color:rgba(255,255,255,.4);border-top:1px solid var(--border);padding-top:28px;font-style:italic;}
+
+/* Responsive about */
+@media(max-width:1024px){
+  #about{padding:90px 32px;}
+  .ab-grid{gap:56px;}
+}
+@media(max-width:768px){
+  #about{padding:80px 20px;}
+  .ab-grid{grid-template-columns:1fr;gap:48px;}
+  .ab-stats{flex-direction:column;}
+  .ab-stat{border-right:none;border-bottom:1px solid var(--border);}
+  .ab-stat:last-child{border-bottom:none;}
+  .ab-card{padding:36px 24px;}
+}
+
     /* ── PROBLEM V1 ── */
     #problem{padding:120px 60px;background:linear-gradient(to bottom,var(--bg),var(--bg2));}
     .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
@@ -342,6 +376,40 @@
   </div>
 </div>
 
+<!-- ABOUT -->
+<section id="about">
+  <div class="ab-grid">
+    <div class="ab-left rv">
+      <div class="stag">Quién está detrás</div>
+      <h2>GEYER<br><span class="acc">RIVADENEIRA</span></h2>
+      <p class="ab-role">Desarrollador Web &amp; Especialista en Conversión</p>
+      <div class="ab-body">
+        <p>Con <strong>más de 10 años</strong> creando sitios web, landing pages y automatizaciones, he ayudado a negocios de distintos tamaños a convertir su presencia digital en una máquina de generar clientes.</p>
+        <p>No soy una agencia con 20 intermediarios. Soy yo, directo, enfocado en que tu página funcione de verdad.</p>
+      </div>
+      <div class="ab-stats">
+        <div class="ab-stat"><span class="ab-num">10+</span><span class="ab-lbl">Años de experiencia</span></div>
+        <div class="ab-stat"><span class="ab-num">80+</span><span class="ab-lbl">Proyectos entregados</span></div>
+        <div class="ab-stat"><span class="ab-num">100%</span><span class="ab-lbl">Clientes satisfechos</span></div>
+      </div>
+    </div>
+    <div class="ab-right rv">
+      <div class="ab-card">
+        <div class="ab-tag">DESARROLLADOR WEB</div>
+        <div class="ab-skills">
+          <div class="ab-skill"><span class="ab-sk-dot"></span>Landing Pages de Alta Conversión</div>
+          <div class="ab-skill"><span class="ab-sk-dot"></span>Automatizaciones y Flujos</div>
+          <div class="ab-skill"><span class="ab-sk-dot"></span>Diseño UI/UX Estratégico</div>
+          <div class="ab-skill"><span class="ab-sk-dot"></span>Integración de CRM y Herramientas</div>
+          <div class="ab-skill"><span class="ab-sk-dot"></span>SEO Técnico y On-Page</div>
+          <div class="ab-skill"><span class="ab-sk-dot"></span>Configuración de Pixel y Analytics</div>
+        </div>
+        <div class="ab-quote">"No construyo páginas bonitas.<br>Construyo páginas que venden."</div>
+        <a href="https://wa.me/573216671673" class="btn-p" style="margin-top:32px;display:inline-block;"><span>Hablar con Geyer →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- PROBLEM V1 -->
 <section id="problem">
   <div class="prob-grid">
